@@ -122,7 +122,7 @@
                 <nav role="navigation" id="w-node-_4ffe5aa5-3693-44de-bf1b-063581e73403-7198b501"
                     class="navbar_menu is-page-height-tablet w-nav-menu">
                     <a href="{{ url('/') }}" class="navbar_link w-nav-link">Home</a>
-                    <a href="#" class="navbar_link w-nav-link">Portfolio</a>
+                    <a href="{{ url('/portfolio') }}" class="navbar_link w-nav-link">Portfolio</a>
                     <a href="{{ url('/contact') }}" class="button is-hamburger w-button">Contact Us </a>
                 </nav>
                 <div id="w-node-_4ffe5aa5-3693-44de-bf1b-063581e73418-7198b501" class="navbar_button-wrapper">

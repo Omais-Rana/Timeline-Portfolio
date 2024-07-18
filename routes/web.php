@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 use App\Project;
+use App\Http\Controllers\ProjectController;
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -22,3 +23,5 @@ Route::get('/portfolio', function () {
     $projects = Project::orderBy('created_at', 'asc')->get();
     return view('portfolio', compact('projects'));
 });
+
+Route::get('/projects/{slug}', [ProjectController::class, 'portSingle'])->name('portfolio.single');

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<title>Contact</title>
+<title>Portfolio</title>
 <style>
     .black-bg {
         background-color: #0a0a0a !important;
@@ -70,74 +70,70 @@
     <link rel="stylesheet" href="{{ asset('assets/assets2/css/responsive.css') }}">
     <script src="{{ asset('assets/assets2/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 
+    <!-- PRELOADER -->
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+    <!-- /PRELOADER -->
 
-    <body>
-        <!--[if lt IE 8]>
-                                                                               <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-                                                                              <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <!-- PRELOADER -->
-        <div class="page-loader">
-            <div class="loader">Loading...</div>
-        </div>
-        <!-- /PRELOADER -->
-
-        <!-- basic-slider start -->
-        <div class="basic-breadcrumb-area black-bg pt-130 pb-0">
-            <div class="container">
-                <div class="basic-breadcrumb text-center">
-                    <h3 class="">Portfolio</h3>
-                    <ol class="breadcrumb text-xs">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li class="active">Projects</li>
-                    </ol>
-                </div>
+    <!-- basic-slider start -->
+    <div class="basic-breadcrumb-area black-bg pt-130 pb-0">
+        <div class="container">
+            <div class="basic-breadcrumb text-center">
+                <h3 class="">Portfolio</h3>
+                <ol class="breadcrumb text-xs">
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    <li class="active">Projects</li>
+                </ol>
             </div>
         </div>
-        <!-- basic-slider end -->
-        <!-- basic-portfolio-area start -->
-        <div class="basic-portfolio-area pt-115 pb-120 black-bg">
-            <div class="container">
-                <div id="portfolio-grid" class="row-portfolio portfolio-style-2">
-                    @foreach ($projects as $project)
-                        <div class="portfolio-item branding video">
-                            <div class="portfolio-wrapper">
-                                <div class="portfolio-thumb">
-                                    <?php $images = json_decode($project->project_images); ?>
+    </div>
+    <!-- basic-slider end -->
+    <!-- basic-portfolio-area start -->
+    <div class="basic-portfolio-area pt-115 pb-120 black-bg">
+        <div class="container">
+            <div id="portfolio-grid" class="row-portfolio portfolio-style-2">
+                @foreach ($projects as $project)
+                    <div class="portfolio-item branding video">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-thumb">
+                                <?php $images = json_decode($project->project_images); ?>
 
-                                    <?php
-                                    
-                                    $firstImage = isset($images[0]) ? $images[0] : null;
-                                    ?>
-                                    @if ($firstImage)
-                                        <img src="{{ Voyager::image($firstImage) }}" loading="lazy" alt="Project Image" />
-                                    @endif
-                                    <div class="view-icon">
-                                        <a href="portfolio-single.html"><i class="ion-arrow-right-c"></i></a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-caption text-left">
-                                    <div class="work-tag">
-                                        <p>{{ $project->project_title }}</p>
-                                    </div>
-                                    <h4><a href="portfolio-single.html">{{ $project->project_description }}</a></h4>
+                                <?php
+                                
+                                $firstImage = isset($images[0]) ? $images[0] : null;
+                                ?>
+                                @if ($firstImage)
+                                    <img src="{{ Voyager::image($firstImage) }}" loading="lazy" alt="Project Image" />
+                                @endif
+                                <div class="view-icon">
+                                    <a href="{{ route('portfolio.single', $project->slug) }}"><i
+                                            class="ion-arrow-right-c"></i></a>
                                 </div>
                             </div>
+                            <div class="portfolio-caption text-left">
+                                <div class="work-tag">
+                                    <p>{{ $project->project_title }}</p>
+                                </div>
+                                <h4><a
+                                        href="{{ route('portfolio.single', $project->slug) }}">{{ $project->project_description }}</a>
+                                </h4>
+                            </div>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
-        <!-- basic-portfolio-area end -->
+    </div>
+    <!-- basic-portfolio-area end -->
 
-        <!-- All js plugins here -->
-        <script src="{{ asset('assets/assets2/js/vendor/jquery-1.12.0.min.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/isotope.pkgd.min.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/imagesloaded.pkgd.min.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/jquery.magnific-popup.min.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/jquery.meanmenu.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/plugins.js') }}"></script>
-        <script src="{{ asset('assets/assets2/js/main.js') }}"></script>
-    @endsection
+    <!-- All js plugins here -->
+    <script src="{{ asset('assets/assets2/js/vendor/jquery-1.12.0.min.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/jquery.meanmenu.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/assets2/js/main.js') }}"></script>
+@endsection

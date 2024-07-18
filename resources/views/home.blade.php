@@ -111,7 +111,7 @@
                                 le monde dentendre la vôtre.</p>
                         </div>
                         <div class="align-center-2">
-                            <a href="#" class="button is-secondary w-button">Discover More</a>
+                            <a href="{{ url('/portfolio') }}" class="button is-secondary w-button">Discover More</a>
                         </div>
                     </div>
                 </div>
