@@ -25,6 +25,10 @@ A Laravel-based portfolio website utilizing Voyager's admin panel. The home page
 
 
 ## Screenshots
-
+![Homepage GIF](https://github.com/Omais-Rana/Timeline-Portfolio/blob/main/screenshots/home.gif)
+![Homepage](https://github.com/Omais-Rana/Timeline-Portfolio/blob/main/screenshots/home.png)
+![Portfolio Single](https://github.com/Omais-Rana/Timeline-Portfolio/blob/main/screenshots/portfolio.png)
+![Contact Page](https://github.com/Omais-Rana/Timeline-Portfolio/blob/main/screenshots/contact.png)
+![Admin Page](https://github.com/Omais-Rana/Timeline-Portfolio/blob/main/screenshots/admin.png)
 
 
