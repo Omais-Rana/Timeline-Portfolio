@@ -126,7 +126,7 @@
                     <a href="{{ url('/contact') }}" class="button is-hamburger w-button">Contact Us </a>
                 </nav>
                 <div id="w-node-_4ffe5aa5-3693-44de-bf1b-063581e73418-7198b501" class="navbar_button-wrapper">
-                    <a href="{{ url('/contact') }}" class="button w-button">Contact Us </a>
+                    <a href="{{ url('/contact') }}" class="button w-button contact-btn">Contact Us </a>
                     <div class="navbar_menu-button w-nav-button">
                         <div class="menu-icon">
                             <div class="menu-icon2_line-top"></div>

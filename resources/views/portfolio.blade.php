@@ -96,21 +96,24 @@
                 @foreach ($projects as $project)
                     <div class="portfolio-item branding video">
                         <div class="portfolio-wrapper">
-                            <div class="portfolio-thumb">
-                                <?php $images = json_decode($project->project_images); ?>
+                            <a href="{{ route('portfolio.single', $project->slug) }}">
+                                <div class="portfolio-thumb">
+                                    <?php $images = json_decode($project->project_images); ?>
 
-                                <?php
-                                
-                                $firstImage = isset($images[0]) ? $images[0] : null;
-                                ?>
-                                @if ($firstImage)
-                                    <img src="{{ Voyager::image($firstImage) }}" loading="lazy" alt="Project Image" />
-                                @endif
-                                <div class="view-icon">
-                                    <a href="{{ route('portfolio.single', $project->slug) }}"><i
-                                            class="ion-arrow-right-c"></i></a>
+                                    <?php
+                                    
+                                    $firstImage = isset($images[0]) ? $images[0] : null;
+                                    ?>
+                                    @if ($firstImage)
+                                        <img src="{{ Voyager::image($firstImage) }}" loading="lazy" alt="Project Image" />
+                                    @endif
+                                    <div class="view-icon">
+                                        <a href="{{ route('portfolio.single', $project->slug) }}"><i
+                                                class="ion-arrow-right-c"></i></a>
+                                    </div>
+
                                 </div>
-                            </div>
+                            </a>
                             <div class="portfolio-caption text-left">
                                 <div class="work-tag">
                                     <p>{{ $project->project_title }}</p>

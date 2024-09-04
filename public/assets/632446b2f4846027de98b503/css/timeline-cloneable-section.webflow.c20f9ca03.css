@@ -2784,7 +2784,7 @@ a:hover {
     }
 
     .footer_component {
-        max-width: 61.9375rem;
+        /* max-width: 61.9375rem; */
         min-width: 48rem;
     }
 }
@@ -2898,9 +2898,9 @@ a:hover {
         margin-left: 0rem;
     }
 
-    /* .button {
-    display: none;
-  } */
+    .contact-btn {
+        display: none;
+    }
 
     .copyright {
         line-height: 1.25rem;
@@ -2911,7 +2911,7 @@ a:hover {
     }
 
     .footer_component {
-        max-width: 29.9375rem;
+        /* max-width: 29.9375rem; */
         min-width: 15rem;
     }
 

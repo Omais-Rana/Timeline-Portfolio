@@ -891,6 +891,21 @@ nav.nav-menu-show {
     width: 100%;
     z-index: 1;
 }
+
+@media screen and (max-width: 900px) {
+    .portfolio-thumb::before {
+        content: normal;
+    }
+
+    .portfolio-wrapper:hover .portfolio-thumb img {
+        transform: none;
+    }
+
+    .portfolio-caption {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
 .portfolio-wrapper:hover .portfolio-thumb::before {
     opacity: 0.9;
 }
