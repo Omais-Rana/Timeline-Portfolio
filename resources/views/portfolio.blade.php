@@ -115,11 +115,9 @@
                                 </div>
                             </a>
                             <div class="portfolio-caption text-left">
-                                <div class="work-tag">
-                                    <p>{{ $project->project_title }}</p>
-                                </div>
+
                                 <h4><a
-                                        href="{{ route('portfolio.single', $project->slug) }}">{{ $project->project_description }}</a>
+                                        href="{{ route('portfolio.single', $project->slug) }}">{{ $project->project_title }}</a>
                                 </h4>
                             </div>
                         </div>

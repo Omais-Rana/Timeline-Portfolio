@@ -68,7 +68,7 @@
                                         <h3>{{ $project->project_title }}</h3>
                                     </div>
                                     <div class="margin-top margin-medium" style="color: whitesmoke">
-                                        {{ $project->project_detail }}
+                                        {{ $project->project_description }}
                                     </div>
                                 </div>
                                 <div class="timeline_image-wrapper">
